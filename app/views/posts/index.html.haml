@@ -5,5 +5,9 @@
  %p
   =post.comments.count
   Comments
+ %p
+  =post.get_likes.count
+  Likes
+
  
 = link_to "Add place", new_post_path
