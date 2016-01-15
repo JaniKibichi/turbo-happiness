@@ -1,0 +1,36 @@
+<div id="podcast_show">
+     <div id="show_banner">
+        <div class="wrapper_skinny">
+         <h1>Toa Mpango - How it works!</h1>
+               <p class="description">"Toa Mpango" is swahili slang for 'provide an exciting activity'. <br/> Toa Mpango allows you to share interesting places that you find in different cities across Africa.<br/>
+               Uploads on Toa Mpango allow users to discover new places and enjoy great scouting conveniences.<br/>
+               As an appreciation, each most popular post of the day gets a gift from Toa Mpango!</p>
+        </div>
+<p class="description">Enhance the fun! Donate & help us discover places in more cities.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="WZ8RMBJSDP96N">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+     </div>
+
+     <div id="episode_content">
+        <div class="wrapper_skinny">
+          <h2>The Steps</h2>
+       <p class="description">
+<br/><br/>     <span>1. Sign up to ToaMpango.com and start sharing interesting places.</span>
+<br/><br/>        <span>2. Encourage your friends to sign up and like your places.</span>
+<br/><br/>       <span>3. Everyday we reward your effort by sending a gift to the most popular place of the last 24 hours.</span>
+<br/><br/>       <span>4. It's that easy, really!</span>
+<br/><br/>       Well... What are you waiting for?
+        </p> <br/><br/>
+           <p class="description"><%= link_to "Share a place!", new_user_registration_path, class: "button button_highlight" %></p>
+        </div>
+     </div>
+</div>
+
+<%= render 'layouts/footer' %>
+

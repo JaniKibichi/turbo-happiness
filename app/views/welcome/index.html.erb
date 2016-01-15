@@ -1,0 +1,19 @@
+  <div id="background">
+   <header class="cf">
+    <div class="wrapper_wide">
+  <a href="#" id="logo">Toa Mpango</a>
+  <nav>
+    <ul>
+    <li><%= link_to "Explore", posts_path %></li>
+     <li><%= link_to "Sign In", new_user_session_path %></li>
+     <li><%= link_to "Share a place", new_user_registration_path %></li>
+    </ul>
+  </nav>
+  </div>
+   </header>
+   <div class="wrapper_skinny">
+    <h1>Tell Africa <br> what is fun today...</h1>
+    <%= link_to "Share a place", new_user_registration_path, class: "button button_highlight" %>
+    <%= link_to "How it works", how_path, class: "button button_white" %>
+  </div>
+  </div>

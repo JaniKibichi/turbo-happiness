@@ -1,0 +1,281 @@
+/*
+ *= require_self
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+
+$border: #E9E9E9;
+$white: #FFFFFF;
+$highlight: #d2674e;
+$dark: #22292e;
+$disabled: #EDEFF5;
+$lessDisabled: #C0C0C0;
+$light: #EDEFF5;
+$banner: #b32500;
+$welcome: #b32500;
+
+body {
+        font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        font-weight: 100;
+}
+
+title {
+    display: none;
+}
+
+#main_header {
+    color: $dark;
+    background: $white;
+    padding: 2.5rem 0;
+}
+
+header {
+        width: 100%;
+        padding: 2rem 0;
+        #logo {
+                float: left;
+                font-size: 1.75rem;
+                a {
+                        color: $white;
+                        text-decoration: none;
+                        &:hover {
+                                color: #50A7C7;
+                        }
+                }
+        }
+        nav {
+                float: right;
+                a {
+                        margin-left: 1.5rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: $highlight;
+                        text-decoration: none;
+                        &:hover {
+                                color: #50A7C7;
+                        }
+                }
+        }
+}
+
+
+
+.wrapper {
+        width: 80%;
+        margin: 0 auto;
+}
+
+.clearfix:before, .clearfix:after {
+        content: " ";
+        display: table;
+}
+
+.clearfix:after {
+        clear: both;
+}
+
+.sign_in_banner{
+    background-image: image-url("signIn_toampango.jpg");
+}
+
+.sign_up_banner{
+    background-image: image-url("signUp_toampango.jpg");
+}
+#banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 4rem;
+}
+#banner h1 {
+    text-align: center;
+    color: $banner;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 8rem 0;
+}
+
+.field{
+  margin: .5rem 0 1.5rem 0;
+}
+
+#podcast_show{
+  #show_banner{
+   background: $dark;
+   text-align: center;
+   padding: 5rem 0;
+   h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $white;
+    margin: 0 0 .5rem 0;
+   }
+ }
+}
+
+#podcast_show #show_banner .description {
+    width: 85%;
+    line-height: 1.75;
+    margin: 0 auto 2rem auto;
+    color: #6e8494;
+}
+
+.button {
+        color: $white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        outline: none;
+        border: none;
+        display: inline-block;
+        min-width: 8.5rem;
+}
+   
+.button_highlight{
+  background: $highlight;
+  transition: background .4s ease-in-out;
+  &:hover{
+    background: darken($highlight, 7.5%);
+  }
+}
+
+.button_white{
+  background: $white;
+  color: $dark;
+  transition: background .4s ease-in-out;
+  &:hover{
+    background: darken($white, 7.5%);
+  }
+}
+
+.button_block{
+  display: block;
+  margin: 0 auto;
+}
+#notice_wrapper{
+ width: 100%;
+ position: absolute;
+ background: rgba(215, 89, 93, 0.7);
+ z-index: 999;
+ p{
+  color: $white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1.25rem 0;
+ }
+}
+.cf:before,cf:after{
+  content: " ";
+  display: table;
+}
+
+.cf:after{
+  clear: both;
+} 
+
+.wrapper_skinny{
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.wrapper_wide{
+  width: 90%;
+  margin: 0 auto;
+}
+  *{
+        box-sizing: border-box;
+}
+
+#main_header #logo {
+    float: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #22292e;
+    text-decoration: none;
+    nav{
+          float: right;
+          ul{
+           list-style: none;
+           margin: 0;
+           li{
+            display: inline;
+            margin-left: 2.5rem;
+            a{
+             color: $dark;
+             text-decoration: none;
+            }
+           }
+          }
+        }
+}
+
+ul{
+         list-style: none;
+         margin: 0;
+         li{
+          display: inline;
+          margin-left: 2.5rem;
+          a{
+           color: $dark;
+           text-decoration: none;
+          }
+         }
+ }
+#main_footer {
+        padding: 2.5em 5%;
+        border-top: 1px solid $border;
+        .copyright{
+         float: left;
+         font-size: .9em;
+         margin: 0;
+        }
+        nav{
+         float: right;
+         i{
+          color: $dark;
+          margin-left: 1em;
+          padding-top: .2em;
+          &:hover{
+                color: $highlight;
+          }
+         }
+        }
+}
+
+.field{
+        margin: .5rem 0 1.5rem 0;
+}
+
+input[type="email"], input[type="text"], input[type="password"], textarea{
+        width: 100%;
+        height: 2.5rem;
+        padding: .25rem 1rem;
+        background: $light;
+        border: 1px solid darken($light, 5%);
+        border-radius: .35rem;
+        margin-top: .5rem;
+}
+
+textarea{
+        min-height: 8rem;
+        margin-top: .5rem !important;
+}
+
+#form{
+ padding: 0 0 5rem 0;
+}
+
+
+
+@import 'home.scss';
+@import 'posts.scss';
+@import 'welcome.scss';

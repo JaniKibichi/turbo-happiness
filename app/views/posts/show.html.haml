@@ -1,11 +1,11 @@
-#post_show
+#post_show.wrapper_wide
 	%h1= @post.title
 	%p.username
 		Shared by
 		= @post.user.name
 		about
 		= time_ago_in_words(@post.created_at)
-		in 
+		ago in 
 		= @post.city
 		, 
 		= @post.country					
@@ -47,7 +47,7 @@
 								%i.fa.fa-thumbs-o-up
 								= @random_post.get_likes.size
 
-#comments
+#comments.wrapper_wide
 	%h2.comment_count= pluralize(@post.comments.count, "Comment")
 	- @comments.each do |comment|
 		.comment

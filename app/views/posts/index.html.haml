@@ -11,6 +11,12 @@
 		%br/
 		%span
 			Share your favorite places in Africa. Or discover new ones!
+
+.field.skinny_wrapper
+= form_tag search_posts_path, method: :get, role: "search" do
+ = text_field_tag :search, params[:search] 
+ = submit_tag "Search Places", name: nil, class:"button button_highlight button_block"
+
 #posts
 	- @posts.each do |post|
 		.post

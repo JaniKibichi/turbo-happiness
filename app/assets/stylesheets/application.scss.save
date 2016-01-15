@@ -1,0 +1,196 @@
+/*
+ *= require_self
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+
+$border: #E9E9E9;
+$white: #FFFFFF;
+$highlight: #d2674e;
+$dark: #22292e;
+$disabled: #EDEFF5;
+$lessDisabled: #C0C0C0;
+$light: #EDEFF5;
+$banner: #AFC94C;
+
+
+body {
+        font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        font-weight: 100;
+}
+
+title {
+    display: none;
+}
+
+header {
+        width: 100%;
+        padding: 2rem 0;
+        #logo {
+                float: left;
+                font-size: 1.75rem;
+                a {
+                        color: #333233;
+                        text-decoration: none;
+                        &:hover {
+                                color: #50A7C7;
+                        }
+                }
+        }
+        nav {
+                float: right;
+                a {
+                        margin-left: 1.5rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: $highlight;
+                        text-decoration: none;
+                        &:hover {
+                                color: #50A7C7;
+                        }
+                }
+        }
+}
+
+
+
+.wrapper {
+        width: 80%;
+        margin: 0 auto;
+}
+
+.clearfix:before, .clearfix:after {
+        content: " ";
+        display: table;
+}
+
+.clearfix:after {
+        clear: both;
+}
+
+.sign_in_banner{
+    background-image: image-url("signIn_toampango.jpg");
+}
+
+.sign_up_banner{
+    background-image: image-url("signUp_toampango.jpg");
+}
+
+.field{
+  margin: .5rem 0 1.5rem 0;
+}
+
+#podcast_show{
+  #show_banner{
+   background: $dark;
+   text-align: center;
+   padding: 5rem 0;
+   h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $white;
+    margin: 0 0 .5rem 0;
+   }
+ }
+}
+
+.button {
+        color: $white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        outline: none;
+        border: none;
+        display: inline-block;
+        min-width: 8.5rem;
+}
+   
+.button_highlight{
+  background: $highlight;
+  transition: background .4s ease-in-out;
+  &:hover{
+    background: darken($highlight, 7.5%);
+  }
+}
+
+.button_white{
+  background: $white;
+  color: $dark;
+  transition: background .4s ease-in-out;
+  &:hover{
+    background: darken($white, 7.5%);
+  }
+}
+
+.button_block{
+  display: block;
+  margin: 0 auto;
+}
+#notice_wrapper{
+ width: 100%;
+ position: absolute;
+ background: rgba(215, 89, 93, 0.7);
+ z-index: 999;
+ p{
+  color: $white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1.25rem 0;
+ }
+}
+.cf:before,cf:after{
+  content: " ";
+  display: table;
+}
+
+.cf:after{
+  clear: both;
+} 
+
+.wrapper_skinny{
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.wrapper_wide{
+  width: 90%;
+  margin: 0 auto;
+}
+  *{
+        box-sizing: border-box;
+}
+
+
+#main_footer {
+        padding: 2.5em 5%;
+        border-top: 1px solid $border;
+        .copyright{
+         float: left;
+         font-size: .9em;
+         margin: 0;
+        }
+        nav{
+         float: right;
+         i{
+          color: $dark;
+          margin-left: 1em;
+          padding-top: .2em;
+          &:hover{
+                color: $highlight;
+          }
+         }
+        }
+}
+
+
+
+@import 'home.scss';
+@import 'posts.scss';
+@import 'welcome.scss';
