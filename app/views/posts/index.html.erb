@@ -1,0 +1,70 @@
+
+<% if user_signed_in? %>
+  <p id="intro">
+    Hello
+    <%= current_user.name %>
+    <br/>
+    <span>
+      Share your favorite places in Africa. Or discover new ones!
+    </span>
+  </p>
+<% else %>
+  <p id="intro">
+    Where are your favorite hangouts?
+    <br/>
+    <span>
+      Share your favorite places in Africa. Or discover new ones!
+    </span>
+  </p>
+<% end %>
+
+<div class="field">
+<div class="wrapper_skinny">
+<%= form_tag search_posts_path, method: :get, role: "search" do %>
+        <p>
+          <%= text_field_tag :search, params[:search], :placeholder =>'Enter place...' %>
+<br/><br/>
+          <%= submit_tag "Search Places", name: nil, class:"button button_highlight button_block" %>
+        </p>
+<% end %>
+</div>
+</div>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post_image">
+        <%= link_to (image_tag post.image.url(:small)), post %>
+      </div>
+      <div class="post_content">
+        <div class="title">
+          <h2>
+            <%= link_to post.title, post %>
+          </h2>
+        </div>
+        <div class="data clearfix">
+          <p class="username">
+            Shared by
+            <%= post.user.name %>
+          </p>
+          <p class="buttons">
+            <span>
+              <i class="fa fa-comments-o"></i>
+              <%= post.comments.count %>
+            </span>
+            <span>
+              <i class="fa fa-thumbs-o-up"></i>
+              <%= post.get_likes.size %>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<div id="main_footer">
+<%= render 'layouts/footer' %>
+
+</div>
