@@ -31,7 +31,7 @@ gem 'searchkick', '~> 1.1', '>= 1.1.2'
 gem 'country_select', '~> 2.5', '>= 2.5.1'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'will_paginate', '~> 3.1'
-
+gem 'friendly_id', '~> 5.1'
 
 
 

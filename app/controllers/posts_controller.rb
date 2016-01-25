@@ -4,19 +4,19 @@ class PostsController < ApplicationController
 
  def search
   if params[:search].present?
-   @posts = Post.search(params[:search])
+   @posts = Post.friendly.search(params[:search])
   else
-   @posts = Post.all
+   @posts = Post.friendly.all
   end
  end 
 
  def index
-  @posts = Post.all.order('created_at desc').paginate(:page => params[:page], :per_page => 12)
+  @posts = Post.friendly.all.order('created_at desc').paginate(:page => params[:page], :per_page => 12)
  end
 
  def show
    @comments = Comment.where(post_id: @post)
-   @random_post = Post.where.not(id: @post).order("RAND()").first
+   @random_post = Post.friendly.where.not(id: @post).order("RAND()").first
  end
 
  def new
@@ -61,11 +61,11 @@ class PostsController < ApplicationController
 
  private
  def find_post
-    @post=Post.find(params[:id])
+    @post=Post.friendly.find(params[:id])
  end
 
  def post_params
-  params.require(:post).permit(:title, :image, :description, :link, :country, :city)
+  params.require(:post).permit(:title, :image, :description, :link, :country, :city, :slug)
  end
 
 end

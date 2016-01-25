@@ -1,0 +1,11 @@
+    %p.username
+              Shared by
+              \#{post.user.name}
+            %p.buttons
+              %span
+                %i.fa.fa-comments-o
+                = post.comments.count
+              %span
+                %i.fa.fa-thumbs-o-up
+                = post.get_likes.size
+  = will_paginate @posts
